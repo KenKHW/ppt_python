@@ -1,0 +1,15 @@
+
+```{r}
+library(PTTmineR)
+rookie_miner <- PTTmineR$new(task.name = "Mr. Meeseeks")
+plan(multiprocess)
+rookie_miner %>% 
+  mine_ptt(board = 'Python')
+```
+
+```{r}
+rookie_miner %>% 
+  export_ptt(export.type = "tbl",
+             obj.name = "tbl_result")
+```
+
